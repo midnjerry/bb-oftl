@@ -1,3 +1,5 @@
+-- Delete this file --
+
 Changes:
 
 Add to static\index.html
