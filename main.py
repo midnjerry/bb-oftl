@@ -8,6 +8,7 @@ import logging
 #for k in [k for k in sys.modules if k.startswith('django')]: 
 #    del sys.modules[k] 
 ############# 
+# To run this locally with the AppEngine program, comment the next 2 lines.  
 from google.appengine.dist import use_library
 use_library('django', '1.0')
 from google.appengine.ext import webapp
@@ -18,7 +19,7 @@ import grappl.handlers, views, cron
 import callbacks.tournaments
 import callbacks.coachs_page
 
-
+# Registering URLs (so they're executable by users) and linking them to appropriate VIEW models.
 application = webapp.WSGIApplication([
   # main tabs
   ('/recent_matches',      views.RecentMatches),
